@@ -1,5 +1,9 @@
 # TopMusic
 
+It is an Angular Single-Page WebApp for exporing music artist details provided by 
+the official LastFM-API. Also we should be able to compare two of our favorite 
+artists side by side.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
 
 ## Development server
