@@ -1,0 +1,13 @@
+<div class="search-container">
+    <form class="search-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <span class="logo" routerLink='/'>TopMusic</span>
+        <input class="search-input" name="search" ngModel placeholder="Search artists" />
+        <!--<mat-autocomplete #auto="matAutocomplete"></mat-autocomplete>
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+          </mat-option>-->
+        <button class="search-button">Search</button>
+
+    </form>
+    <button class="compare-button" (click)="openCompareView()">Compare Artists</button>
+</div>

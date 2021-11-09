@@ -1,0 +1,76 @@
+.albums{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-width: 1200px;
+    margin: 10px auto;
+}
+
+.album{
+    width: 280px;
+    margin: 10px;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #202020;
+    box-shadow: 4px 3px 8px 0px rgb(247 144 165 / 22%);
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 4px 3px 11px 6px rgb(247 144 165 / 46%);
+        transform: translateY(-3px);
+      }
+    
+      &-thumb-container {
+        background-color: #000;
+        position: relative;
+        height: 150px;
+        color: #fff;
+        text-align: center;
+      }
+    
+      &-thumbnail {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        height: 145px;
+      }
+    
+      &-description {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 125px;
+      }
+    
+      &-name {
+        color: #fff;
+        font-size: 18px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-bottom: 15px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    
+      &-playcount {
+        color: #fff;
+        font-size: 12px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-bottom: 10px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    
+      
+}
+.heading{
+  font-size: 20px;
+  color: #fff;
+  padding-top: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

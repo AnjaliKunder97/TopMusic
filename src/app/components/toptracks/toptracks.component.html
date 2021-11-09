@@ -1,0 +1,13 @@
+<div class="top-tracks-container">
+  <div class="content">
+    <h3 class="heading">Top 5 Tracks of {{ artist.name }}</h3>
+    <mat-list>
+      <mat-list-item *ngFor="let track of artist.toptracks.track | slice:0:5; index as i">
+        <mat-icon color="black" mat-list-icon>music_note</mat-icon>
+        <h5 class="trackname" mat-line>{{track.name}}</h5>
+        <h5 class="trackplays" mat-line>Plays: {{ track.playcount}}</h5>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>

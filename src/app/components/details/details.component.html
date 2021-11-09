@@ -1,0 +1,20 @@
+<div class="details">
+
+    <div class="artist-content">
+        <div class="details-wrapper">
+            <div class="artist-banner">
+                <img *ngIf="artist" class="artist-banner-img" src="assets/images/artists/{{ artist.name }}.jpg"
+                    alt="background image" />
+            </div>
+            <div class="artist-header">
+                <h1 class="artist-header-title">{{ artist.name }}</h1>
+                <h4 class="artist-header-listeners">Listeners: {{ artist.stats.listeners }}</h4>
+                <h4 class="artist-header-plays">Playcount: {{ artist.stats.playcount }}</h4>
+            </div>
+
+        </div>
+        <app-toptracks [artist]="artist"></app-toptracks>
+        <app-topalbums [artist]="artist"></app-topalbums>
+    </div>
+
+</div>

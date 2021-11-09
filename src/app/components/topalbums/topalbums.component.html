@@ -1,0 +1,17 @@
+<h3 class="heading">Top 5 Albums of {{ artist.name }}</h3>
+<div class="albums">
+
+  <ng-container *ngFor="let album of artist.topalbums.album | slice:0:5; index as i">
+    <div class="album">
+      <div class="album-thumb-container">
+        <img
+          src="https://lh3.googleusercontent.com/proxy/MxlZ2CO2z3yRRWb5cPNqZ2eLOaLvp5kkjO8nVrdgQmSwcNIHfGTtOPf74JCY93nj7I60uB4dp5H4xN-fF9ePDpbd9pJFaHApuQKn_M8LNW5_XUwa8_GM4FgXjUTueOF7WnzHWmGe1w"
+          alt="thumbnail" class="album-thumbnail" />
+      </div>
+      <div class="album-description">
+        <p class="album-name">{{ album.name }}</p>
+        <p class="album-playcount">Playcount: {{ album.playcount }}</p>
+      </div>
+    </div>
+  </ng-container>
+</div>

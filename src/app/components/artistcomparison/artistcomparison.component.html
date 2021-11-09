@@ -1,0 +1,53 @@
+<div class="compare">
+    <h2 class="compare-title">Let's Compare 2 Artists!</h2>
+    <div class="compare-container" style="display: flex;">
+        <mat-card style="flex: 1 1 auto;">
+            <div class="compare-container-card">
+                <form class="compare-form" #form1="ngForm" (ngSubmit)="onCompare1(form1)">
+                    <input class="compare-input" name="compareArtist1" ngModel
+                        placeholder="Search your favourite artists" />
+                    <button class="compare-button">Search</button>
+                </form>
+            </div>
+            <div class="details" *ngIf="artist1">
+                <img mat-card-image class="imgs" src="assets/images/artists/{{ artist1.name }}.jpg" alt="thumbnail"
+                    class="artist-thumbnail" />
+                <h4 class="artistname">Name: {{ artist1.name }}</h4>
+                <h4 class="artistplays">Listeners: {{ artist1.stats.listeners }}</h4>
+
+            </div>
+        </mat-card>
+        <mat-card style="flex: 1 1 auto;">
+            <div class="compare-container">
+                <form class="compare-form" #form2="ngForm" (ngSubmit)="onCompare2(form2)">
+                    <input class="compare-input" name="compareArtist2" ngModel
+                        placeholder="Search your favorite artists" />
+                    <button class="compare-button">Search</button>
+
+                </form>
+            </div>
+            <div class="details" *ngIf="artist2">
+                <img mat-card-image class="imgs" src="assets/images/artists/{{ artist2.name }}.jpg" alt="thumbnail"
+                    class="artist-thumbnail" />
+                <h4 class="artistname">Name: {{ artist2.name }}</h4>
+                <h4 class="artistplays">Listeners: {{ artist2.stats.listeners }}</h4>
+            </div>
+        </mat-card>
+    </div>
+</div>
+<!--<div class="search-container">
+                <form class="search-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+                    <span class="logo" routerLink='/'>TopMusic</span>
+                    <input
+                        class="search-input"
+                        name="search"
+                        ngModel
+                        placeholder="Search artists"
+                    />
+                    <button class="search-button">Search</button>
+            
+                </form>
+            </div>
+            <mat-icon color="black" mat-list-icon>music_note</mat-icon>
+            <h5 class="trackname"mat-line>{{track.name}}</h5>
+            <h5 class="trackplays"mat-line>Plays: {{ track.playcount}}</h5>-->

@@ -1,0 +1,28 @@
+<div class="filters">
+  <mat-form-field>
+    <mat-label>Country</mat-label>
+    <mat-select panelClass="sort-select" [(ngModel)]="sort" (selectionChange)="searchArtists(sort)">
+      <mat-option value="spain">Spain</mat-option>
+      <mat-option value="australia">Australia</mat-option>
+      <mat-option value="canada">Canada</mat-option>
+
+    </mat-select>
+  </mat-form-field>
+  <h2 class="title">Top 10 Artists in {{ sort.toUpperCase() }}</h2>
+</div>
+
+<div class="artists">
+  <ng-container *ngFor="let artist of artists | slice:0:10;index as i">
+    <div class="artist" (click)="openDetailView(artist.mbid)">
+      <div class="artist-thumb-container">
+        <img *ngIf="artist" src="assets/images/artists/{{ artist.name }}.jpg" alt="thumbnail"
+          class="artist-thumbnail" />
+        <p *ngIf="!artist.image">No image</p>
+      </div>
+      <div class="artist-description">
+        <p class="artist-name">{{ artist.name }}</p>
+        <p class="artist-listeners">Listeners: {{ artist.listeners }}</p>
+      </div>
+    </div>
+  </ng-container>
+</div>
